@@ -1,0 +1,177 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+body{
+    background-image: url(../Images/contactus.jpg);
+    background-position: center;
+    background-size: cover;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav{
+    background: darkmagenta;
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    font-style: italic;
+}
+nav ul{
+    float:right;
+    margin-right: 20px;
+    text-decoration: none;
+    
+}
+nav ul li{
+    display:inline-block;
+    line-height: 80px;
+    margin: 0 5px; 
+    list-style-type: none;
+
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+a.active, a:hover{
+    background: palevioletred;
+    transition:.5s;
+    text-decoration: none;
+}
+.checkbtn{
+    font-size: 30px;
+    color: rgb(12, 12, 12);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+     display: none; 
+    
+}
+#check{
+    display: none;
+}
+@media(max-width:952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li{
+        display: block;
+    }
+    nav ul li a{
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+    }
+}
+@media(max-width:858px){
+    .checkbtn{
+        display: block;        
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(78, 44, 78);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        list-style-type: none;     
+        
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px; 
+        
+    }
+    nav ul li a{
+        font-size: 20px;
+        text-decoration: none;
+    }
+    a:hover, a.active{
+        background: none;
+        color: rgb(193, 0, 252);
+    }
+    #check:checked~ ul{
+        left: 0;
+    }
+}
+
+.contact-us{
+    height: 80vh;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 210px;
+}
+
+.card{
+    background:rgba(17, 1, 54, 0.8);
+    padding: 0 20px;
+    margin: 0 10px;
+    width: calc(33% - 20px);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    color: white;
+}
+
+.card-icon{
+    font-size: 28px;
+    background: grey;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 40%;
+    transition: 0.3s linear;
+}
+
+.card:hover .card-icon{
+    background: none;
+    color: rgb(0, 141, 127);
+    transform: scale(1.6);
+}
+
+.card p{
+    margin-top: 20px;
+    color: darkgreen;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.card:hover p{
+    max-height: 40px;
+    opacity: 1;
+}
+.fa{
+    margin-right: 4px;
+    color: rgb(13, 136, 68);    
+}
